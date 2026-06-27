@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, CircleDot } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { LanguageSelector } from './LanguageSelector';
 
@@ -44,7 +44,7 @@ export function Navbar() {
           aria-label="Club home"
         >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-navy-800 shadow-md shadow-navy-900/30 transition-transform group-hover:scale-105">
-            <CircleDot className="h-5 w-5 text-accent-400" aria-hidden="true" />
+            <img src="/tt-white-logo.png" alt="TT Sant Andreu logo" className="h-9 w-9 object-contain" />
           </span>
           <span
             className={`font-display text-lg font-bold tracking-tight transition-colors ${

@@ -146,7 +146,7 @@ const es: Translation = {
     academy: 'Academia',
     competition: 'Competición',
     schedule: 'Horario',
-    membership: 'Membresía',
+    membership: 'Cuota de Socio',
     contact: 'Contacto',
     join: 'Únete',
   },
@@ -167,10 +167,10 @@ const es: Translation = {
   history: {
     eyebrow: 'Nuestra trayectoria',
     title: 'Historia',
-    body: 'Nuestro club fue fundado en 2007 y ha crecido hasta convertirse en una comunidad para jugadores de todos los niveles. Lo que empezó como un pequeño grupo de aficionados hoy es un referente local del tenis de mesa, con una academia consolidada y equipos compitiendo en ligas regionales.',
+    body: 'Nuestro club fue fundado en 2007 y ha crecido hasta convertirse en una comunidad para jugadores de todos los niveles. Lo que empezó como un pequeño grupo de aficionados hoy es un referente local del tenis de mesa, con una academia y equipos compitiendo en ligas regionales.',
     milestone1: '2007',
     milestone1Label: 'Fundación del club',
-    milestone2: '2014',
+    milestone2: '2017',
     milestone2Label: 'Primer equipo en liga regional',
     milestone3: '2021',
     milestone3Label: 'Apertura de la academia infantil',
@@ -179,7 +179,7 @@ const es: Translation = {
     eyebrow: 'Formación',
     title: 'Academia',
     subtitle:
-      'Programas structurados para cada edad y nivel, con entrenadores cualificados.',
+      'Programas estructurados para cada edad y nivel, con entrenadores.',
     kids: {
       title: 'Infantil',
       levels: [
@@ -195,7 +195,7 @@ const es: Translation = {
     },
     adults: {
       title: 'Adultos',
-      desc: 'Entrenamiento solo disponible para jugadores registrados en competición.',
+      desc: 'Entrenamiento solo disponible para jugadores federados o con experiencia previa debido al nivel de la competición.',
       note: 'Plazas limitadas · Requiere federación deportiva',
     },
   },
@@ -203,66 +203,66 @@ const es: Translation = {
     eyebrow: 'Liga y torneos',
     title: 'Competición',
     intro:
-      'Nuestros jugadores adultos compiten en ligas locales y regionales a lo largo de toda la temporada, con seguimiento técnico y apoyo del club en cada fase.',
+      'Nuestros jugadores adultos compiten en ligas regionales a lo largo de toda la temporada, actualmente contamos con dos equipos competitivos en 2a A y 3a B regional.',
     points: [
-      'Los adultos compiten en ligas locales y regionales',
+      'Los adultos compiten en ligas regionales',
       'El entrenamiento con entrenador está incluido para jugadores federados',
       'Seguimiento técnico y material de competición disponible',
     ],
     future:
-      'Estamos trabajando en la expansión de la sección competitiva con nuevas categorías y sedes próximamente.',
+      'Estamos trabajando en la expansión de la sección competitiva con nuevos equipos y categorias.',
   },
   schedule: {
     eyebrow: 'Tu semana',
     title: 'Horario',
     subtitle: 'Consulta las franjas disponibles para cada actividad.',
     legend: {
-      members: 'Socios no competidores',
+      members: 'Socios no federados',
       kidsBeginner: 'Academia infantil (iniciación)',
       kidsIntermediate: 'Academia infantil (intermedio)',
-      adults: 'Entrenamiento adultos (competición)',
+      adults: 'Socios federados (competición)',
     },
     days: [
       {
         day: 'Lunes',
         rows: [
-          { time: '16:00–18:00', label: 'Socios no competidores', tone: 'members' },
-          { time: '18:00–20:00', label: 'Academia infantil (iniciación)', tone: 'kids-beginner' },
+          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Martes',
         rows: [
-          { time: '16:00–19:00', label: 'Socios no competidores', tone: 'members' },
-          { time: '19:00–20:00', label: 'Academia infantil (iniciación)', tone: 'kids-beginner' },
+          { time: '16:00–19:00', label: 'No Federados', tone: 'members' },
+          { time: '19:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Miércoles',
         rows: [
-          { time: '16:00–18:00', label: 'Socios no competidores', tone: 'members' },
-          { time: '18:00–20:00', label: 'Academia infantil (intermedio)', tone: 'kids-intermediate' },
+          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
         ],
       },
       {
         day: 'Jueves',
         rows: [
-          { time: '16:00–18:00', label: 'Socios no competidores', tone: 'members' },
-          { time: '18:00–20:00', label: 'Entrenamiento adultos (competición)', tone: 'adults' },
+          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–20:00', label: 'Federados', tone: 'adults' },
         ],
       },
       {
         day: 'Viernes',
         rows: [
-          { time: '16:00–18:00', label: 'Socios no competidores', tone: 'members' },
-          { time: '18:00–20:00', label: 'Entrenamiento adultos (competición)', tone: 'adults' },
+          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–20:00', label: 'Federados', tone: 'adults' },
         ],
       },
     ],
   },
   membership: {
     eyebrow: 'Únete al club',
-    title: 'Membresía',
+    title: 'Cuota de Socio',
     subtitle: 'Tres tipos de socio, para que cada jugador encuentre su lugar.',
     categories: [
       {
@@ -278,7 +278,6 @@ const es: Translation = {
             features: [
               'Para niños de 6 a 10 años',
               'Grupos reducidos con entrenador',
-              'Materiales incluidos',
               'Horarios adaptados a escolares',
             ],
             cta: 'Apuntar a mi hijo/a',
@@ -289,9 +288,9 @@ const es: Translation = {
             period: '/mes',
             tagline: 'Para quienes ya tienen base',
             features: [
-              'Para jugadores de 10 a 16 años con experiencia',
+              'Para jugadores con experiencia',
+              'Grupos reducidos con entrenador',
               'Entrenamiento técnico y táctico',
-              'Participación en torneos escolares',
               'Acceso a sesiones de competición',
             ],
             cta: 'Apuntar a mi hijo/a',
@@ -321,7 +320,7 @@ const es: Translation = {
       {
         type: 'team',
         label: 'Equipo competitivo',
-        description: 'Para los que quieren entrenar en serio y competir en liga.',
+        description: 'Para los que quieren entrenar y competir en liga.',
         plans: [
           {
             name: 'Jugador de equipo',
@@ -330,10 +329,9 @@ const es: Translation = {
             tagline: 'Entrena y compite con el club',
             features: [
               'Entrenamiento técnico con entrenador',
-              'Inscripción en liga federada incluida',
+              'Inscripción en liga federada',
               'Equipación oficial del club',
               'Acceso a todos los torneos del club',
-              'Convocatorias y viajes con el equipo',
             ],
             cta: 'Quiero competir',
           },
@@ -359,11 +357,11 @@ const es: Translation = {
     },
     info: {
       phoneLabel: 'Teléfono',
-      phone: '+34 600 123 456',
+      phone: '+34 611 674 664',
       emailLabel: 'Email',
-      email: 'info@clubtenismesa.es',
+      email: 'rafa.gomezper@gmail.com',
       addressLabel: 'Dirección',
-      address: 'Carrer del Tennis, 12 · Barcelona',
+      address: 'Carrer Coroleu, 15 2n · Barcelona',
     },
     mapAlt: 'Mapa de ubicación del club',
   },
@@ -384,7 +382,7 @@ const ca: Translation = {
     academy: 'Acadèmia',
     competition: 'Competició',
     schedule: 'Horari',
-    membership: 'Membresia',
+    membership: 'Quota de Soci',
     contact: 'Contacte',
     join: 'Uneix-te',
   },
@@ -407,7 +405,7 @@ const ca: Translation = {
     body: 'El nostre club va ser fundat l\'any 2007 i ha crescut fins a convertir-se en una comunitat per a jugadors de tots els nivells. El que va començar com un petit grup d\'aficionats avui és un referent local del tennis taula, amb una acadèmia consolidada i equips competint en lligues regionals.',
     milestone1: '2007',
     milestone1Label: 'Fundació del club',
-    milestone2: '2014',
+    milestone2: '2017',
     milestone2Label: 'Primer equip en lliga regional',
     milestone3: '2021',
     milestone3Label: 'Obertura de l\'acadèmia infantil',
@@ -498,7 +496,7 @@ const ca: Translation = {
   },
   membership: {
     eyebrow: 'Uneix-te al club',
-    title: 'Membresia',
+    title: 'Quota de Soci',
     subtitle: 'Tres tipus de soci, perquè cada jugador trobi el seu lloc.',
     categories: [
       {
@@ -595,11 +593,11 @@ const ca: Translation = {
     },
     info: {
       phoneLabel: 'Telèfon',
-      phone: '+34 600 123 456',
+      phone: '+34 611 674 664',
       emailLabel: 'Email',
-      email: 'info@clubtenismesa.es',
+      email: 'rafa.gomezper@gmail.com',
       addressLabel: 'Adreça',
-      address: 'Carrer del Tennis, 12 · Barcelona',
+      address: 'Carrer Coroleu, 15 2n · Barcelona',
     },
     mapAlt: 'Mapa d\'ubicació del club',
   },
@@ -643,7 +641,7 @@ const en: Translation = {
     body: 'Our club was founded in 2007 and has grown into a community for players of all levels. What started as a small group of enthusiasts is now a local reference for table tennis, with a consolidated academy and teams competing in regional leagues.',
     milestone1: '2007',
     milestone1Label: 'Club founded',
-    milestone2: '2014',
+    milestone2: '2017',
     milestone2Label: 'First team in regional league',
     milestone3: '2021',
     milestone3Label: 'Kids academy launched',
@@ -831,11 +829,11 @@ const en: Translation = {
     },
     info: {
       phoneLabel: 'Phone',
-      phone: '+34 600 123 456',
+      phone: '+34 611 674 664',
       emailLabel: 'Email',
-      email: 'info@clubtenismesa.es',
+      email: 'rafa.gomezper@gmail.com',
       addressLabel: 'Address',
-      address: 'Carrer del Tennis, 12 · Barcelona',
+      address: 'Carrer Coroleu, 15 2n · Barcelona',
     },
     mapAlt: 'Map of the club location',
   },

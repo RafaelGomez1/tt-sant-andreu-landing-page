@@ -15,8 +15,8 @@ const SLIDES = [
     alt: 'match score',
   },
   {
-    src: '/tt-sant-andreu-views.jpeg',
-    alt: 'TT Sant Andreu club views',
+    src: '/training-session.jpg',
+    alt: 'training session',
   },
   {
     src: '/tt-sant-andreu-views.jpeg',
