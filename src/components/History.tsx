@@ -38,8 +38,10 @@ export function History() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy-900/20">
               <img
-                src="https://images.pexels.com/photos/6298418/pexels-photo-6298418.jpeg?auto=compress&cs=tinysrgb&w=900"
-                alt="Table tennis match in progress"
+                src="/tt-sant-andreu-views.jpeg"
+                alt="Instalaciones del club TT Sant Andreu"
+                width={900}
+                height={675}
                 className="aspect-[4/3] w-full object-cover"
                 loading="lazy"
               />

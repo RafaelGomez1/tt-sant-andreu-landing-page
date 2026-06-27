@@ -85,20 +85,16 @@ export function Contact() {
                 </a>
               ))}
 
-              {/* Map placeholder */}
-              <div id="map" className="relative mt-1 flex-1 overflow-hidden rounded-2xl border border-slate-100 bg-navy-900 shadow-sm">
-                <img
-                  src="https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt={c.mapAlt}
-                  className="h-44 w-full object-cover opacity-60 lg:h-full"
+              {/* Google Maps embed */}
+              <div id="map" className="mt-1 flex-1 overflow-hidden rounded-2xl border border-slate-100 shadow-sm">
+                <iframe
+                  title={c.mapAlt}
+                  src="https://www.google.com/maps?q=Carrer+Coroleu+15,+Barcelona&output=embed"
+                  className="h-44 w-full border-0 lg:h-full"
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
                 />
-                <div className="absolute inset-0 flex items-end p-4">
-                  <div className="flex items-center gap-2 rounded-full bg-white/95 px-3 py-1.5 text-xs font-medium text-navy-800 shadow-md backdrop-blur">
-                    <MapPin className="h-3.5 w-3.5 text-accent-500" aria-hidden="true" />
-                    {c.info.address}
-                  </div>
-                </div>
               </div>
             </div>
           </Reveal>

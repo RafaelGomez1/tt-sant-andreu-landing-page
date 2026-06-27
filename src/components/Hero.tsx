@@ -12,13 +12,13 @@ export function Hero() {
   return (
     <section id="home" className="relative isolate overflow-hidden bg-navy-900 text-white">
       {/* Background image + overlays */}
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/hero-tt-sant-andreu.avif')",
-        }}
-        aria-hidden="true"
+      <img
+        src="/hero-tt-sant-andreu.avif"
+        alt="TT Sant Andreu club de tenis de mesa en Barcelona"
+        width={1920}
+        height={1080}
+        fetchPriority="high"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy-950/70 via-navy-900/65 to-navy-900/75" aria-hidden="true" />
 
