@@ -300,7 +300,7 @@ const es: Translation = {
             name: 'Iniciación',
             price: '18€',
             period: '/mes',
-            tagline: 'Primeros pasos en el pimpón',
+            tagline: 'Primeros pasos en el tenis de mesa',
             features: [
               'Para niños de 6 a 10 años',
               'Grupos reducidos con entrenador',
@@ -559,7 +559,7 @@ const ca: Translation = {
             name: 'Iniciació',
             price: '18€',
             period: '/mes',
-            tagline: 'Primers passos al ping-pong',
+            tagline: 'Primers passos al tennis taula',
             features: [
               'Per a nens de 6 a 10 anys',
               'Grups reduïts amb entrenador',
