@@ -16,7 +16,7 @@ export function Hero() {
         className="absolute inset-0 -z-20 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/4034374/pexels-photo-4034374.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            "url('/hero-tt-sant-andreu.avif')",
         }}
         aria-hidden="true"
       />

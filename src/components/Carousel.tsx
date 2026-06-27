@@ -3,24 +3,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const SLIDES = [
   {
-    src: 'https://images.pexels.com/photos/6203527/pexels-photo-6203527.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    alt: 'Table tennis player in action',
+    src: '/tt-sant-andreu-views.jpeg',
+    alt: 'TT Sant Andreu club views',
   },
   {
-    src: 'https://images.pexels.com/photos/8111357/pexels-photo-8111357.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    alt: 'Ping pong paddle and ball on table',
+    src: '/lira-kids-tournament.jpg',
+    alt: 'Kids tournament',
   },
   {
-    src: 'https://images.pexels.com/photos/6203521/pexels-photo-6203521.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    alt: 'Table tennis match in progress',
+    src: '/score-picture.jpg',
+    alt: 'match score',
   },
   {
-    src: 'https://images.pexels.com/photos/6203505/pexels-photo-6203505.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    alt: 'Close-up of table tennis serve',
+    src: '/tt-sant-andreu-views.jpeg',
+    alt: 'TT Sant Andreu club views',
   },
   {
-    src: 'https://images.pexels.com/photos/6203518/pexels-photo-6203518.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    alt: 'Table tennis competition',
+    src: '/tt-sant-andreu-views.jpeg',
+    alt: 'TT Sant Andreu club views',
   },
 ];
 
