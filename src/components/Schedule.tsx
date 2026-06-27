@@ -55,7 +55,7 @@ export function Schedule() {
 
   return (
     <section id="schedule" className="bg-white">
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:pt-24 lg:pb-16">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:pt-14 lg:pb-16">
         <SectionHeading eyebrow={s.eyebrow} title={s.title} subtitle={s.subtitle} />
 
         {/* Legend */}
