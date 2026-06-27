@@ -1,8 +1,8 @@
 export type Lang = 'es' | 'ca' | 'en';
 
 export const LANGS: { code: Lang; label: string; flag: string }[] = [
-  { code: 'es', label: 'Español', flag: 'ES' },
   { code: 'ca', label: 'Català', flag: 'CA' },
+  { code: 'es', label: 'Español', flag: 'ES' },
   { code: 'en', label: 'English', flag: 'EN' },
 ];
 

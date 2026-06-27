@@ -12,12 +12,12 @@ const LanguageContext = createContext<LanguageContextValue | undefined>(undefine
 const STORAGE_KEY = 'ttc-lang';
 
 function getInitialLang(): Lang {
-  if (typeof window === 'undefined') return 'es';
+  if (typeof window === 'undefined') return 'ca';
   const stored = window.localStorage.getItem(STORAGE_KEY) as Lang | null;
   if (stored && stored in translations) return stored;
   const browser = window.navigator.language.slice(0, 2).toLowerCase();
   if (browser in translations) return browser as Lang;
-  return 'es';
+  return 'ca';
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
