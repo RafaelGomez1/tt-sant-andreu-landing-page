@@ -203,7 +203,7 @@ const es: Translation = {
     eyebrow: 'Liga y torneos',
     title: 'Competición',
     intro:
-      'Nuestros jugadores adultos compiten en ligas regionales a lo largo de toda la temporada, actualmente contamos con dos equipos competitivos en 2a A y 3a B regional.',
+      'Nuestros jugadores adultos compiten en ligas regionales a lo largo de toda la temporada. Actualmente contamos con dos equipos competitivos, uno en 2a A y otro en 3a B regional.',
     points: [
       'Los adultos compiten en ligas regionales',
       'El entrenamiento con entrenador está incluido para jugadores federados',
@@ -402,7 +402,7 @@ const ca: Translation = {
   history: {
     eyebrow: 'La nostra trajectòria',
     title: 'Història',
-    body: 'El nostre club va ser fundat l\'any 2007 i ha crescut fins a convertir-se en una comunitat per a jugadors de tots els nivells. El que va començar com un petit grup d\'aficionats avui és un referent local del tennis taula, amb una acadèmia consolidada i equips competint en lligues regionals.',
+    body: 'El nostre club va ser fundat l\'any 2007 i ha crescut fins a convertir-se en una comunitat per a jugadors de tots els nivells. El que va començar com un petit grup d\'aficionats avui és un referent local del tennis taula, amb una acadèmia i equips competint en lligues regionals.',
     milestone1: '2007',
     milestone1Label: 'Fundació del club',
     milestone2: '2017',
@@ -429,7 +429,7 @@ const ca: Translation = {
     },
     adults: {
       title: 'Adults',
-      desc: 'Entrenament només per a jugadors federats.',
+      desc: 'Entrenament només per a jugadors federats o amb experiència prèvia degut al nivell de la competició.',
       note: 'Places limitades · Requereix federació esportiva',
     },
   },
@@ -437,59 +437,59 @@ const ca: Translation = {
     eyebrow: 'Lliga i torneigs',
     title: 'Competició',
     intro:
-      'Els nostres jugadors adults competeixen en lligues locals i regionals al llarg de tota la temporada, amb seguiment tècnic i suport del club a cada fase.',
+      'Els nostres jugadors adults competeixen en lligues regionals al llarg de tota la temporada. Actualment comptem amb dos equips de competició, un a 2a A i l\'altre a 3a B regional.',
     points: [
-      'Els adults competeixen en lligues locals i regionals',
-      'L\'entrenament amb entrenador està inclòs per a jugadors federats',
+      'Els adults competeixen en lligues regionals',
+      'L\'entrenador està inclòs per a jugadors federats',
       'Suport tècnic i material de competició disponible',
     ],
     future:
-      'Estem treballant en l\'expansió de la secció competitiva amb noves categories i seus properament.',
+      'Estem treballant en l\'expansió de la secció competitiva amb nous equips i categories.',
   },
   schedule: {
     eyebrow: 'La teva setmana',
     title: 'Horari',
     subtitle: 'Consulta les franges disponibles per a cada activitat.',
     legend: {
-      members: 'Socis no competidors',
+      members: 'Socis no federats',
       kidsBeginner: 'Acadèmia infantil (iniciació)',
       kidsIntermediate: 'Acadèmia infantil (intermedi)',
-      adults: 'Entrenament adults (competició)',
+      adults: 'Socis federats',
     },
     days: [
       {
         day: 'Dilluns',
         rows: [
-          { time: '16:00–18:00', label: 'Socis no competidors', tone: 'members' },
-          { time: '18:00–20:00', label: 'Acadèmia infantil (iniciació)', tone: 'kids-beginner' },
+          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Dimarts',
         rows: [
-          { time: '16:00–19:00', label: 'Socis no competidors', tone: 'members' },
-          { time: '19:00–20:00', label: 'Acadèmia infantil (iniciació)', tone: 'kids-beginner' },
+          { time: '16:00–19:00', label: 'No federats', tone: 'members' },
+          { time: '19:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Dimecres',
         rows: [
-          { time: '16:00–18:00', label: 'Socis no competidors', tone: 'members' },
-          { time: '18:00–20:00', label: 'Acadèmia infantil (intermedi)', tone: 'kids-intermediate' },
+          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
         ],
       },
       {
         day: 'Dijous',
         rows: [
-          { time: '16:00–18:00', label: 'Socis no competidors', tone: 'members' },
-          { time: '18:00–20:00', label: 'Entrenament adults (competició)', tone: 'adults' },
+          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–20:00', label: 'Federats', tone: 'adults' },
         ],
       },
       {
         day: 'Divendres',
         rows: [
-          { time: '16:00–18:00', label: 'Socis no competidors', tone: 'members' },
-          { time: '18:00–20:00', label: 'Entrenament adults (competició)', tone: 'adults' },
+          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–20:00', label: 'Federats', tone: 'adults' },
         ],
       },
     ],
@@ -524,8 +524,8 @@ const ca: Translation = {
             tagline: 'Per als qui ja tenen base',
             features: [
               'Per a jugadors de 10 a 16 anys amb experiència',
+              'Grups reduïts amb entrenador',
               'Entrenament tècnic i tàctic',
-              'Participació en torneigs escolars',
               'Accés a sessions de competició',
             ],
             cta: 'Apuntar el meu fill/a',
@@ -567,7 +567,6 @@ const ca: Translation = {
               'Inscripció a la lliga federada inclosa',
               'Equipació oficial del club',
               'Accés a tots els torneigs del club',
-              'Convocatòries i desplaçaments amb l\'equip',
             ],
             cta: 'Vull competir',
           },
