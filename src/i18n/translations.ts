@@ -83,6 +83,14 @@ export type Translation = {
       kidsIntermediate: string;
       adults: string;
     };
+    filters: {
+      all: string;
+      members: string;
+      kidsBeginner: string;
+      kidsIntermediate: string;
+      adults: string;
+    };
+    cta: string;
     days: ScheduleDay[];
   };
   membership: {
@@ -222,6 +230,14 @@ const es: Translation = {
       kidsIntermediate: 'Academia infantil (intermedio)',
       adults: 'Socios federados (competición)',
     },
+    filters: {
+      all: 'Todos',
+      members: 'No federados',
+      kidsBeginner: 'Iniciación',
+      kidsIntermediate: 'Intermedio',
+      adults: 'Federados',
+    },
+    cta: 'Prueba una clase',
     days: [
       {
         day: 'Lunes',
@@ -456,6 +472,14 @@ const ca: Translation = {
       kidsIntermediate: 'Acadèmia infantil (intermedi)',
       adults: 'Socis federats',
     },
+    filters: {
+      all: 'Tots',
+      members: 'No federats',
+      kidsBeginner: 'Iniciació',
+      kidsIntermediate: 'Intermedi',
+      adults: 'Federats',
+    },
+    cta: 'Prova una classe',
     days: [
       {
         day: 'Dilluns',
@@ -691,6 +715,14 @@ const en: Translation = {
       kidsIntermediate: 'Kids academy (intermediate)',
       adults: 'Adult training (competition)',
     },
+    filters: {
+      all: 'All',
+      members: 'Non-competing',
+      kidsBeginner: 'Beginner',
+      kidsIntermediate: 'Intermediate',
+      adults: 'Federated',
+    },
+    cta: 'Try a class',
     days: [
       {
         day: 'Monday',
