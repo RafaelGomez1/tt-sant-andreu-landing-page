@@ -1,11 +1,12 @@
-import { Check, ArrowRight, GraduationCap, Users, Trophy } from 'lucide-react';
+import { Check, ArrowRight, Baby, GraduationCap, Users, Swords } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { SectionHeading, Reveal } from './SectionHeading';
 
 const TYPE_META = {
-  academy: { icon: GraduationCap, accent: 'bg-emerald-500', check: 'bg-emerald-100 text-emerald-700' },
-  casual:  { icon: Users,         accent: 'bg-sky-500',     check: 'bg-sky-100 text-sky-700' },
-  team:    { icon: Trophy,        accent: 'bg-accent-500',  check: 'bg-accent-100 text-accent-700' },
+  'kids-beginner':     { icon: Baby,           accent: 'bg-orange-400',  accentText: 'text-orange-600', check: 'bg-orange-100 text-orange-700' },
+  'kids-intermediate': { icon: GraduationCap,  accent: 'bg-emerald-500', accentText: 'text-emerald-600', check: 'bg-emerald-100 text-emerald-700' },
+  casual:              { icon: Users,           accent: 'bg-slate-400',   accentText: 'text-slate-500', check: 'bg-slate-100 text-slate-700' },
+  team:                { icon: Swords,          accent: 'bg-blue-500',    accentText: 'text-blue-600', check: 'bg-blue-100 text-blue-700' },
 } as const;
 
 export function Membership() {
@@ -37,7 +38,7 @@ export function Membership() {
 
                   <div className="flex flex-1 flex-col p-6">
                     {/* Icon + category label */}
-                    <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    <div className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-wide ${meta.accentText}`}>
                       <Icon className="h-3.5 w-3.5" aria-hidden="true" />
                       {plan.categoryLabel}
                     </div>

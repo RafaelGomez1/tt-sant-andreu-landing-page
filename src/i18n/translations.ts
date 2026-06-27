@@ -98,7 +98,7 @@ export type Translation = {
     title: string;
     subtitle: string;
     categories: {
-      type: 'academy' | 'casual' | 'team';
+      type: 'kids-beginner' | 'kids-intermediate' | 'casual' | 'team';
       label: string;
       description: string;
       plans: {
@@ -292,9 +292,9 @@ const es: Translation = {
     subtitle: 'Tres tipos de socio, para que cada jugador encuentre su lugar.',
     categories: [
       {
-        type: 'academy',
-        label: 'Academia infantil',
-        description: 'Para niños y jóvenes que aprenden y progresan con entrenador.',
+        type: 'kids-beginner',
+        label: 'Infantil iniciación',
+        description: 'Primeros pasos en el tenis de mesa con entrenador.',
         plans: [
           {
             name: 'Iniciación',
@@ -308,6 +308,13 @@ const es: Translation = {
             ],
             cta: 'Apuntar a mi hijo/a',
           },
+        ],
+      },
+      {
+        type: 'kids-intermediate',
+        label: 'Infantil intermedio',
+        description: 'Para jóvenes con base que quieren mejorar.',
+        plans: [
           {
             name: 'Tecnificación',
             price: '18€',
@@ -325,7 +332,7 @@ const es: Translation = {
       },
       {
         type: 'casual',
-        label: 'Socio casual',
+        label: 'No federados',
         description: 'Juega por diversión en la franja libre de 16h a 18h.',
         plans: [
           {
@@ -345,7 +352,7 @@ const es: Translation = {
       },
       {
         type: 'team',
-        label: 'Equipo competitivo',
+        label: 'Federados',
         description: 'Para los que quieren entrenar y competir en liga.',
         plans: [
           {
@@ -544,9 +551,9 @@ const ca: Translation = {
     subtitle: 'Tres tipus de soci, perquè cada jugador trobi el seu lloc.',
     categories: [
       {
-        type: 'academy',
-        label: 'Acadèmia infantil',
-        description: 'Per a nens i joves que aprenen i progressen amb entrenador.',
+        type: 'kids-beginner',
+        label: 'Infantil iniciació',
+        description: 'Primers passos al tennis de taula amb entrenador.',
         plans: [
           {
             name: 'Iniciació',
@@ -561,6 +568,13 @@ const ca: Translation = {
             ],
             cta: 'Apuntar el meu fill/a',
           },
+        ],
+      },
+      {
+        type: 'kids-intermediate',
+        label: 'Infantil intermedi',
+        description: 'Per a joves amb base que volen millorar.',
+        plans: [
           {
             name: 'Tecnificació',
             price: '18€',
@@ -578,7 +592,7 @@ const ca: Translation = {
       },
       {
         type: 'casual',
-        label: 'Soci casual',
+        label: 'No federats',
         description: 'Juga per diversió a la franja lliure de 16h a 18h.',
         plans: [
           {
@@ -598,7 +612,7 @@ const ca: Translation = {
       },
       {
         type: 'team',
-        label: 'Equip competitiu',
+        label: 'Federats',
         description: 'Per als qui volen entrenar seriosament i competir en lliga.',
         plans: [
           {
@@ -797,9 +811,9 @@ const en: Translation = {
     subtitle: 'Three member types, so every player finds their place.',
     categories: [
       {
-        type: 'academy',
-        label: 'Kids academy',
-        description: 'For children and teens learning and improving with a coach.',
+        type: 'kids-beginner',
+        label: 'Kids beginner',
+        description: 'First steps in table tennis with a coach.',
         plans: [
           {
             name: 'Beginners',
@@ -814,6 +828,13 @@ const en: Translation = {
             ],
             cta: 'Enrol my child',
           },
+        ],
+      },
+      {
+        type: 'kids-intermediate',
+        label: 'Kids intermediate',
+        description: 'For young players with a base who want to improve.',
+        plans: [
           {
             name: 'Development',
             price: '€18',
@@ -831,7 +852,7 @@ const en: Translation = {
       },
       {
         type: 'casual',
-        label: 'Casual member',
+        label: 'Non-competing',
         description: 'Play for fun during the open slot from 4pm to 6pm.',
         plans: [
           {
@@ -851,7 +872,7 @@ const en: Translation = {
       },
       {
         type: 'team',
-        label: 'Competitive team',
+        label: 'Federated',
         description: 'For those who want to train seriously and compete in the league.',
         plans: [
           {
