@@ -94,12 +94,12 @@ export function Schedule() {
                     return (
                       <div
                         key={`${day.day}-${row.time}`}
-                        className={`rounded-lg px-3 py-2.5 transition-all duration-200 hover:shadow-md hover:-translate-y-px ${style.bg}`}
+                        className={`rounded-lg px-3 py-2.5 text-center transition-all duration-200 hover:shadow-md hover:-translate-y-px ${style.bg}`}
                       >
                         <div className={`text-lg font-extrabold tabular-nums tracking-tight leading-tight ${style.timeText}`}>
                           {row.time}
                         </div>
-                        <div className={`mt-1 flex items-center gap-1.5 text-xs font-medium ${style.text}`}>
+                        <div className={`mt-1 inline-flex items-center gap-1.5 text-xs font-medium ${style.text}`}>
                           <Icon className="h-3 w-3" aria-hidden="true" />
                           {row.label}
                         </div>
@@ -133,16 +133,14 @@ export function Schedule() {
                   return (
                     <div
                       key={`m-${day.day}-${row.time}`}
-                      className={`rounded-lg px-4 py-3 transition-all duration-200 ${style.bg}`}
+                      className={`rounded-lg px-4 py-3 text-center transition-all duration-200 ${style.bg}`}
                     >
-                      <div className="flex items-center justify-between">
-                        <span className={`text-xl font-extrabold tabular-nums tracking-tight ${style.timeText}`}>
-                          {row.time}
-                        </span>
-                        <span className={`flex items-center gap-1.5 text-sm font-medium ${style.text}`}>
-                          <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-                          {row.label}
-                        </span>
+                      <div className={`text-xl font-extrabold tabular-nums tracking-tight ${style.timeText}`}>
+                        {row.time}
+                      </div>
+                      <div className={`mt-1 inline-flex items-center gap-1.5 text-sm font-medium ${style.text}`}>
+                        <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                        {row.label}
                       </div>
                     </div>
                   );

@@ -242,36 +242,46 @@ const es: Translation = {
       {
         day: 'Lunes',
         rows: [
-          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
+          { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
+          { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–19:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
+          { time: '19:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Martes',
         rows: [
-          { time: '16:00–19:00', label: 'No Federados', tone: 'members' },
+          { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
+          { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–19:00', label: 'No Federados', tone: 'members' },
           { time: '19:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Miércoles',
         rows: [
-          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
+          { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
+          { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
+          { time: '19:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
         ],
       },
       {
         day: 'Jueves',
         rows: [
-          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–20:00', label: 'Federados', tone: 'adults' },
+          { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
+          { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–19:00', label: 'Federados', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Federados', tone: 'adults' },
         ],
       },
       {
         day: 'Viernes',
         rows: [
-          { time: '16:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–20:00', label: 'Federados', tone: 'adults' },
+          { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
+          { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
+          { time: '18:00–19:00', label: 'Federados', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Federados', tone: 'adults' },
         ],
       },
     ],
@@ -484,36 +494,46 @@ const ca: Translation = {
       {
         day: 'Dilluns',
         rows: [
-          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
+          { time: '16:00–17:00', label: 'No federats', tone: 'members' },
+          { time: '17:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–19:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
+          { time: '19:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Dimarts',
         rows: [
-          { time: '16:00–19:00', label: 'No federats', tone: 'members' },
+          { time: '16:00–17:00', label: 'No federats', tone: 'members' },
+          { time: '17:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–19:00', label: 'No federats', tone: 'members' },
           { time: '19:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Dimecres',
         rows: [
-          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
+          { time: '16:00–17:00', label: 'No federats', tone: 'members' },
+          { time: '17:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
+          { time: '19:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
         ],
       },
       {
         day: 'Dijous',
         rows: [
-          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–20:00', label: 'Federats', tone: 'adults' },
+          { time: '16:00–17:00', label: 'No federats', tone: 'members' },
+          { time: '17:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–19:00', label: 'Federats', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Federats', tone: 'adults' },
         ],
       },
       {
         day: 'Divendres',
         rows: [
-          { time: '16:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–20:00', label: 'Federats', tone: 'adults' },
+          { time: '16:00–17:00', label: 'No federats', tone: 'members' },
+          { time: '17:00–18:00', label: 'No federats', tone: 'members' },
+          { time: '18:00–19:00', label: 'Federats', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Federats', tone: 'adults' },
         ],
       },
     ],
@@ -727,36 +747,46 @@ const en: Translation = {
       {
         day: 'Monday',
         rows: [
-          { time: '16:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–20:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
+          { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
+          { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
+          { time: '18:00–19:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
+          { time: '19:00–20:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Tuesday',
         rows: [
-          { time: '16:00–19:00', label: 'Non-competing members', tone: 'members' },
+          { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
+          { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
+          { time: '18:00–19:00', label: 'Non-competing members', tone: 'members' },
           { time: '19:00–20:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
         ],
       },
       {
         day: 'Wednesday',
         rows: [
-          { time: '16:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
+          { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
+          { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
+          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
+          { time: '19:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
         ],
       },
       {
         day: 'Thursday',
         rows: [
-          { time: '16:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–20:00', label: 'Adult training (competition)', tone: 'adults' },
+          { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
+          { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
+          { time: '18:00–19:00', label: 'Adult training (competition)', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Adult training (competition)', tone: 'adults' },
         ],
       },
       {
         day: 'Friday',
         rows: [
-          { time: '16:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–20:00', label: 'Adult training (competition)', tone: 'adults' },
+          { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
+          { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
+          { time: '18:00–19:00', label: 'Adult training (competition)', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Adult training (competition)', tone: 'adults' },
         ],
       },
     ],
