@@ -40,8 +40,6 @@ export type Translation = {
     stat2Label: string;
     stat3: string;
     stat3Label: string;
-    seoHeading: string;
-    seoDescription: string;
   };
   history: {
     eyebrow: string;
@@ -162,9 +160,9 @@ const es: Translation = {
   },
   hero: {
     badge: 'Club de Tenis de Mesa · Desde 2007',
-    title: 'Bienvenido a Nuestro Club de Tenis de Mesa',
+    title: 'Club de Tennis Taula Sant Andreu',
     subtitle:
-      'Entrena, compite y disfruta del deporte para todos los niveles',
+      'Somos un club de tenis de mesa en Barcelona especializado en formación y competición. Entrenamos jugadores de todos los niveles en Sant Andreu.',
     joinCta: 'Únete',
     contactCta: 'Contacto',
     stat1: '17+',
@@ -173,8 +171,6 @@ const es: Translation = {
     stat2Label: 'Miembros activos',
     stat3: '8',
     stat3Label: 'Mesas profesionales',
-    seoHeading: 'Club de Tennis Taula en Sant Andreu',
-    seoDescription: 'Somos un club de tenis de mesa en Barcelona especializado en formación y competición. Entrenamos jugadores de todos los niveles en Sant Andreu.',
   },
   history: {
     eyebrow: 'Nuestra trayectoria',
@@ -425,8 +421,8 @@ const ca: Translation = {
   },
   hero: {
     badge: 'Club de Tennis Taula · Des de 2007',
-    title: 'Benvingut al Nostre Club de Tennis Taula',
-    subtitle: "Entrena, competeix i gaudeix de l'esport per a tots els nivells",
+    title: 'Club de Tennis Taula Sant Andreu',
+    subtitle: 'Som un club de tennis taula a Barcelona especialitzat en formació i competició. Entrenem jugadors de tots els nivells a Sant Andreu.',
     joinCta: 'Uneix-te',
     contactCta: 'Contacte',
     stat1: '17+',
@@ -435,8 +431,6 @@ const ca: Translation = {
     stat2Label: 'Membres actius',
     stat3: '8',
     stat3Label: 'Taules professionals',
-    seoHeading: 'Club de Tennis Taula a Sant Andreu',
-    seoDescription: 'Som un club de tennis taula a Barcelona especialitzat en formació i competició. Entrenem jugadors de tots els nivells a Sant Andreu.',
   },
   history: {
     eyebrow: 'La nostra trajectòria',
@@ -687,8 +681,8 @@ const en: Translation = {
   },
   hero: {
     badge: 'Table Tennis Club · Since 2007',
-    title: 'Welcome to Our Table Tennis Club',
-    subtitle: 'Train, compete, and enjoy the sport for all levels',
+    title: 'Table Tennis Club in Sant Andreu',
+    subtitle: 'We are a table tennis club in Barcelona specializing in training and competition. We coach players of all levels in Sant Andreu.',
     joinCta: 'Join Us',
     contactCta: 'Contact',
     stat1: '17+',
@@ -697,8 +691,6 @@ const en: Translation = {
     stat2Label: 'Active members',
     stat3: '8',
     stat3Label: 'Professional tables',
-    seoHeading: 'Table Tennis Club in Sant Andreu',
-    seoDescription: 'We are a table tennis club in Barcelona specializing in training and competition. We coach players of all levels in Sant Andreu.',
   },
   history: {
     eyebrow: 'Our journey',
