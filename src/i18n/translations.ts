@@ -40,6 +40,8 @@ export type Translation = {
     stat2Label: string;
     stat3: string;
     stat3Label: string;
+    seoHeading: string;
+    seoDescription: string;
   };
   history: {
     eyebrow: string;
@@ -171,6 +173,8 @@ const es: Translation = {
     stat2Label: 'Miembros activos',
     stat3: '8',
     stat3Label: 'Mesas profesionales',
+    seoHeading: 'Club de Tennis Taula en Sant Andreu',
+    seoDescription: 'Somos un club de tenis de mesa en Barcelona especializado en formación y competición. Entrenamos jugadores de todos los niveles en Sant Andreu.',
   },
   history: {
     eyebrow: 'Nuestra trayectoria',
@@ -431,6 +435,8 @@ const ca: Translation = {
     stat2Label: 'Membres actius',
     stat3: '8',
     stat3Label: 'Taules professionals',
+    seoHeading: 'Club de Tennis Taula a Sant Andreu',
+    seoDescription: 'Som un club de tennis taula a Barcelona especialitzat en formació i competició. Entrenem jugadors de tots els nivells a Sant Andreu.',
   },
   history: {
     eyebrow: 'La nostra trajectòria',
@@ -691,6 +697,8 @@ const en: Translation = {
     stat2Label: 'Active members',
     stat3: '8',
     stat3Label: 'Professional tables',
+    seoHeading: 'Table Tennis Club in Sant Andreu',
+    seoDescription: 'We are a table tennis club in Barcelona specializing in training and competition. We coach players of all levels in Sant Andreu.',
   },
   history: {
     eyebrow: 'Our journey',
