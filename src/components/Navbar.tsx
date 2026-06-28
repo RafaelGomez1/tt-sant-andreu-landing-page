@@ -59,9 +59,12 @@ export function Navbar() {
         <ul className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => (
             <li key={item.id}>
-              <button
-                type="button"
-                onClick={() => handleNav(item.id)}
+              <a
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNav(item.id);
+                }}
                 className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
                   scrolled
                     ? 'text-slate-600 hover:bg-navy-50 hover:text-navy-900'
@@ -69,7 +72,7 @@ export function Navbar() {
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             </li>
           ))}
         </ul>
@@ -105,13 +108,16 @@ export function Navbar() {
           <ul className="mx-auto max-w-6xl space-y-1 px-5 py-4">
             {navItems.map((item) => (
               <li key={item.id}>
-                <button
-                  type="button"
-                  onClick={() => handleNav(item.id)}
+                <a
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNav(item.id);
+                  }}
                   className="block w-full rounded-lg px-3 py-2.5 text-left text-base font-medium text-slate-700 transition-colors hover:bg-navy-50 hover:text-navy-900"
                 >
                   {item.label}
-                </button>
+                </a>
               </li>
             ))}
             <li className="pt-2">

@@ -1,12 +1,9 @@
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Twitter } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const NAV_IDS = ['history', 'academy', 'competition', 'schedule', 'membership', 'contact'] as const;
 const SOCIALS = [
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Instagram, label: 'Instagram', href: '#' },
   { icon: Twitter, label: 'Twitter', href: 'https://x.com/ttsantandreu' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
 ];
 
 export function Footer() {
@@ -41,6 +38,8 @@ export function Footer() {
                   <li key={s.label}>
                     <a
                       href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={s.label}
                       className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-800/70 text-navy-200 transition-all hover:-translate-y-0.5 hover:bg-navy-700 hover:text-white"
                     >
@@ -58,13 +57,16 @@ export function Footer() {
             <ul className="mt-3 space-y-2">
               {NAV_IDS.map((id) => (
                 <li key={id}>
-                  <button
-                    type="button"
-                    onClick={() => handleNav(id)}
+                  <a
+                    href={`#${id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNav(id);
+                    }}
                     className="text-sm text-navy-300 transition-colors hover:text-white"
                   >
                     {t.nav[id]}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
