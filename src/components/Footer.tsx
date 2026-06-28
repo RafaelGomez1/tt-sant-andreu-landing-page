@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2.5">
               <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-navy-800">
-                <img src="/tt-white-logo.png" alt="TT Sant Andreu logo" className="h-7 w-7 object-contain" />
+                <img src="/images/tt-white-logo.png" alt="TT Sant Andreu logo" className="h-7 w-7 object-contain" />
               </span>
               <span className="font-display text-lg font-bold text-white">
                 TT Sant<span className="text-accent-500"> Andreu</span>

@@ -13,7 +13,7 @@ export function Hero() {
     <section id="home" className="relative isolate overflow-hidden bg-navy-900 text-white">
       {/* Background image + overlays */}
       <img
-        src="/hero-tt-sant-andreu.avif"
+        src="/images/hero-tt-sant-andreu.avif"
         alt="TT Sant Andreu club de tenis de mesa en Barcelona"
         width={1920}
         height={1080}

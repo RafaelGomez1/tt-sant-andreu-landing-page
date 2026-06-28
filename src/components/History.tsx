@@ -38,7 +38,7 @@ export function History() {
           <div className="relative">
             <div className="overflow-hidden rounded-3xl shadow-2xl shadow-navy-900/20">
               <img
-                src="/tt-sant-andreu-views.jpeg"
+                src="/images/tt-sant-andreu-views.jpeg"
                 alt="Instalaciones del club TT Sant Andreu"
                 width={900}
                 height={675}

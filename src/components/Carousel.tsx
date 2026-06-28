@@ -3,24 +3,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const SLIDES = [
   {
-    src: '/tt-sant-andreu-views.jpeg',
+    src: '/images/tt-sant-andreu-views.jpeg',
     alt: 'TT Sant Andreu club views',
   },
   {
-    src: '/lira-kids-tournament.jpg',
+    src: '/images/lira-kids-tournament.jpg',
     alt: 'Kids tournament',
   },
   {
-    src: '/score-picture.jpg',
+    src: '/images/score-picture.jpg',
     alt: 'match score',
   },
   {
-    src: '/training-session.jpg',
+    src: '/images/training-session.jpg',
     alt: 'training session',
   },
   {
-    src: '/tt-sant-andreu-views.jpeg',
-    alt: 'TT Sant Andreu club views',
+    src: '/images/torneo-fm.jpeg',
+    alt: 'TT Sant Andreu open',
   },
 ];
 
