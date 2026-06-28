@@ -54,7 +54,7 @@ export function Membership() {
                     </div>
 
                     {/* Features */}
-                    <ul className="mt-5 flex-1 space-y-2.5 border-t border-slate-100 pt-5">
+                    <ul className="mt-5 flex-1 space-y-2.5 border-t border-slate-100 pt-5 text-left">
                       {plan.features.map((f) => (
                         <li key={f} className="flex items-start gap-2.5 text-sm">
                           <span className={`mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full ${meta.check}`}>
