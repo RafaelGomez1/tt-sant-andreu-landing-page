@@ -2,6 +2,13 @@
   command   = "npm run build"
   publish   = "dist"
 
+# Force trailing slash for canonical consistency
+[[redirects]]
+  from   = "https://www.tt-sant-andreu.netlify.app/*"
+  to     = "https://tt-sant-andreu.netlify.app/:splat"
+  status = 301
+  force  = true
+
 # SPA client-side routing: serve index.html for all paths
 [[redirects]]
   from   = "/*"
