@@ -1,9 +1,10 @@
-import { Twitter } from 'lucide-react';
+import { Twitter, Youtube } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const NAV_IDS = ['history', 'academy', 'competition', 'schedule', 'membership', 'contact'] as const;
 const SOCIALS = [
   { icon: Twitter, label: 'Twitter', href: 'https://x.com/ttsantandreu' },
+  { icon: Youtube, label: 'YouTube', href: 'https://www.youtube.com/@tennistaulasantandreu9544' },
 ];
 
 export function Footer() {
