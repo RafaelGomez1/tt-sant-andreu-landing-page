@@ -189,7 +189,7 @@ const es: Translation = {
     subtitle:
       'Programas estructurados para cada edad y nivel, con entrenadores.',
     kids: {
-      title: 'Infantil',
+      title: 'Academia Infantil',
       levels: [
         {
           name: 'Iniciación',
@@ -202,7 +202,7 @@ const es: Translation = {
       ],
     },
     adults: {
-      title: 'Adultos',
+      title: 'Entrenamiento Adultos',
       desc: 'Entrenamiento solo disponible para jugadores federados o con experiencia previa debido al nivel de la competición.',
       note: 'Plazas limitadas · Requiere federación deportiva',
     },
@@ -222,7 +222,7 @@ const es: Translation = {
   },
   schedule: {
     eyebrow: 'Tu semana',
-    title: 'Horario',
+    title: 'Horario de Entrenamiento',
     subtitle: 'Consulta las franjas disponibles para cada actividad.',
     legend: {
       members: 'Socios no federados',
@@ -253,8 +253,8 @@ const es: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
           { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–19:00', label: 'No Federados', tone: 'members' },
-          { time: '19:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
+          { time: '18:00–19:00', label: 'Federados', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Federados', tone: 'adults' },
         ],
       },
       {
@@ -262,8 +262,8 @@ const es: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
           { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
-          { time: '19:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
+          { time: '18:00–19:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
+          { time: '19:00–20:00', label: 'Infantil iniciación', tone: 'kids-beginner' },
         ],
       },
       {
@@ -280,8 +280,8 @@ const es: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
           { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–19:00', label: 'Federados', tone: 'adults' },
-          { time: '19:00–20:00', label: 'Federados', tone: 'adults' },
+          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
+          { time: '19:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
         ],
       },
     ],
@@ -448,7 +448,7 @@ const ca: Translation = {
     title: 'Acadèmia',
     subtitle: 'Programes estructurats per a cada edat i nivell, amb entrenadors qualificats.',
     kids: {
-      title: 'Infantil',
+      title: 'Acadèmia Infantil',
       levels: [
         {
           name: 'Iniciació',
@@ -461,7 +461,7 @@ const ca: Translation = {
       ],
     },
     adults: {
-      title: 'Adults',
+      title: 'Entrenament Adults',
       desc: 'Entrenament només per a jugadors federats o amb experiència prèvia degut al nivell de la competició.',
       note: 'Places limitades · Requereix federació esportiva',
     },
@@ -481,7 +481,7 @@ const ca: Translation = {
   },
   schedule: {
     eyebrow: 'La teva setmana',
-    title: 'Horari',
+    title: 'Horari d\'Entrenament',
     subtitle: 'Consulta les franges disponibles per a cada activitat.',
     legend: {
       members: 'Socis no federats',
@@ -512,8 +512,8 @@ const ca: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
           { time: '17:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–19:00', label: 'No federats', tone: 'members' },
-          { time: '19:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
+          { time: '18:00–19:00', label: 'Federats', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Federats', tone: 'adults' },
         ],
       },
       {
@@ -521,8 +521,8 @@ const ca: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
           { time: '17:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
-          { time: '19:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
+          { time: '18:00–19:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
+          { time: '19:00–20:00', label: 'Infantil iniciació', tone: 'kids-beginner' },
         ],
       },
       {
@@ -539,8 +539,8 @@ const ca: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
           { time: '17:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–19:00', label: 'Federats', tone: 'adults' },
-          { time: '19:00–20:00', label: 'Federats', tone: 'adults' },
+          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
+          { time: '19:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
         ],
       },
     ],
@@ -708,7 +708,7 @@ const en: Translation = {
     title: 'Academy',
     subtitle: 'Structured programs for every age and level, with qualified coaches.',
     kids: {
-      title: 'Kids',
+      title: 'Kids Academy',
       levels: [
         {
           name: 'Initiation',
@@ -721,7 +721,7 @@ const en: Translation = {
       ],
     },
     adults: {
-      title: 'Adults',
+      title: 'Adult Training',
       desc: 'Training available only for registered competition players.',
       note: 'Limited spots · Requires sports federation membership',
     },
@@ -741,7 +741,7 @@ const en: Translation = {
   },
   schedule: {
     eyebrow: 'Your week',
-    title: 'Schedule',
+    title: 'Training Schedule',
     subtitle: 'Check the available time slots for each activity.',
     legend: {
       members: 'Non-competing members',
@@ -772,8 +772,8 @@ const en: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
           { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–19:00', label: 'Non-competing members', tone: 'members' },
-          { time: '19:00–20:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
+          { time: '18:00–19:00', label: 'Adult training (competition)', tone: 'adults' },
+          { time: '19:00–20:00', label: 'Adult training (competition)', tone: 'adults' },
         ],
       },
       {
@@ -781,8 +781,8 @@ const en: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
           { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
-          { time: '19:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
+          { time: '18:00–19:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
+          { time: '19:00–20:00', label: 'Kids academy (beginner)', tone: 'kids-beginner' },
         ],
       },
       {
@@ -799,8 +799,8 @@ const en: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
           { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–19:00', label: 'Adult training (competition)', tone: 'adults' },
-          { time: '19:00–20:00', label: 'Adult training (competition)', tone: 'adults' },
+          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
+          { time: '19:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
         ],
       },
     ],
