@@ -45,6 +45,9 @@ export type Translation = {
     eyebrow: string;
     title: string;
     body: string;
+    affiliation: string;
+    affiliationLink: string;
+    affiliationName: string;
     milestone1: string;
     milestone1Label: string;
     milestone2: string;
@@ -176,6 +179,9 @@ const es: Translation = {
     eyebrow: 'Nuestra trayectoria',
     title: 'Historia',
     body: 'Nuestro club fue fundado en 2007 y ha crecido hasta convertirse en una comunidad para jugadores de todos los niveles. Lo que empezó como un pequeño grupo de aficionados hoy es un referente local del tenis de mesa, con una academia y equipos compitiendo en ligas regionales.',
+    affiliation: 'Formamos parte de la entidad',
+    affiliationLink: 'https://scelalira.cat/',
+    affiliationName: 'SCE La Lira',
     milestone1: '2007',
     milestone1Label: 'Fundación del club',
     milestone2: '2017',
@@ -298,11 +304,11 @@ const es: Translation = {
         plans: [
           {
             name: 'Iniciación',
-            price: '18€',
+            price: '20€',
             period: '/mes',
             tagline: 'Primeros pasos en el tenis de mesa',
             features: [
-              'Para niños de 6 a 10 años',
+              'Para niños de hasta 14 años',
               'Grupos reducidos con entrenador',
               'Horarios adaptados a escolares',
             ],
@@ -357,7 +363,7 @@ const es: Translation = {
         plans: [
           {
             name: 'Jugador de equipo',
-            price: 'Cuota + liga',
+            price: '25€ + licencia',
             period: '',
             tagline: 'Entrena y compite con el club',
             features: [
@@ -436,6 +442,9 @@ const ca: Translation = {
     eyebrow: 'La nostra trajectòria',
     title: 'Història',
     body: 'El nostre club va ser fundat l\'any 2007 i ha crescut fins a convertir-se en una comunitat per a jugadors de tots els nivells. El que va començar com un petit grup d\'aficionats avui és un referent local del tennis taula, amb una acadèmia i equips competint en lligues regionals.',
+    affiliation: 'Formem part de l\'entitat',
+    affiliationLink: 'https://scelalira.cat/',
+    affiliationName: 'SCE La Lira',
     milestone1: '2007',
     milestone1Label: 'Fundació del club',
     milestone2: '2017',
@@ -557,11 +566,11 @@ const ca: Translation = {
         plans: [
           {
             name: 'Iniciació',
-            price: '18€',
+            price: '20€',
             period: '/mes',
             tagline: 'Primers passos al tennis taula',
             features: [
-              'Per a nens de 6 a 10 anys',
+              'Per a nens de fins a 14 anys',
               'Grups reduïts amb entrenador',
               'Materials inclosos',
               'Horaris adaptats a escolars',
@@ -617,7 +626,7 @@ const ca: Translation = {
         plans: [
           {
             name: 'Jugador d\'equip',
-            price: 'Quota + lliga',
+            price: '25€ + llicència',
             period: '',
             tagline: 'Entrena i competeix amb el club',
             features: [
@@ -696,6 +705,9 @@ const en: Translation = {
     eyebrow: 'Our journey',
     title: 'History',
     body: 'Our club was founded in 2007 and has grown into a community for players of all levels. What started as a small group of enthusiasts is now a local reference for table tennis, with a consolidated academy and teams competing in regional leagues.',
+    affiliation: 'We are part of',
+    affiliationLink: 'https://scelalira.cat/',
+    affiliationName: 'SCE La Lira',
     milestone1: '2007',
     milestone1Label: 'Club founded',
     milestone2: '2017',
@@ -817,11 +829,11 @@ const en: Translation = {
         plans: [
           {
             name: 'Beginners',
-            price: '€18',
+            price: '€20',
             period: '/month',
             tagline: 'First steps in table tennis',
             features: [
-              'For children aged 6 to 10',
+              'For children up to 14 years old',
               'Small groups with a coach',
               'Equipment included',
               'School-friendly timetables',
@@ -877,7 +889,7 @@ const en: Translation = {
         plans: [
           {
             name: 'Team player',
-            price: 'Fee + league',
+            price: '€25 + license',
             period: '',
             tagline: 'Train and compete with the club',
             features: [

@@ -19,6 +19,18 @@ export function History() {
           <SectionHeading eyebrow={h.eyebrow} title={h.title} align="left" />
           <Reveal delay={120}>
             <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">{h.body}</p>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 sm:text-lg">
+              {h.affiliation}{' '}
+              <a
+                href={h.affiliationLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-navy-800 underline decoration-accent-400 underline-offset-2 hover:text-accent-600"
+              >
+                {h.affiliationName}
+              </a>
+              .
+            </p>
           </Reveal>
 
           <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
