@@ -89,7 +89,7 @@ export function Contact() {
               <div id="map" className="mt-1 flex-1 overflow-hidden rounded-2xl border border-slate-100 shadow-sm">
                 <iframe
                   title={c.mapAlt}
-                  src="https://www.google.com/maps?q=Carrer+Coroleu+15,+Barcelona&output=embed"
+                  src="https://www.google.com/maps?q=tt+sant+andreu&output=embed"
                   className="h-44 w-full border-0 lg:h-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
