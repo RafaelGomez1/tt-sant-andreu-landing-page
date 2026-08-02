@@ -9,8 +9,9 @@
   status = 301
   force  = true
 
-# Cache hashed assets immutably
+# Cache hashed assets immutably and allow cross-origin loading
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
