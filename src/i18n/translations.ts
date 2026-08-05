@@ -10,6 +10,7 @@ export type ScheduleRow = {
   time: string;
   label: string;
   tone: 'members' | 'kids-beginner' | 'kids-intermediate' | 'adults';
+  split?: { label: string; tone: 'members' | 'kids-beginner' | 'kids-intermediate' | 'adults' };
 };
 
 export type ScheduleDay = {
@@ -111,6 +112,7 @@ export type Translation = {
         tagline: string;
         features: string[];
         cta: string;
+        priceTiers?: { hours: string; price: string }[];
       }[];
     }[];
   };
@@ -286,8 +288,8 @@ const es: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
           { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
-          { time: '19:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate' },
+          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate', split: { label: 'Federados', tone: 'adults' } },
+          { time: '19:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate', split: { label: 'Federados', tone: 'adults' } },
         ],
       },
     ],
@@ -304,7 +306,7 @@ const es: Translation = {
         plans: [
           {
             name: 'Iniciación',
-            price: '20€',
+            price: '18–30€',
             period: '/mes',
             tagline: 'Primeros pasos en el tenis de mesa',
             features: [
@@ -313,6 +315,12 @@ const es: Translation = {
               'Horarios adaptados a escolares',
             ],
             cta: 'Apuntar a mi hijo/a',
+            priceTiers: [
+              { hours: '1 h/semana', price: '18€' },
+              { hours: '2 h/semana', price: '20€' },
+              { hours: '3 h/semana', price: '25€' },
+              { hours: '4 h/semana', price: '30€' },
+            ],
           },
         ],
       },
@@ -548,8 +556,8 @@ const ca: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
           { time: '17:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
-          { time: '19:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate' },
+          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate', split: { label: 'Federats', tone: 'adults' } },
+          { time: '19:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate', split: { label: 'Federats', tone: 'adults' } },
         ],
       },
     ],
@@ -566,7 +574,7 @@ const ca: Translation = {
         plans: [
           {
             name: 'Iniciació',
-            price: '20€',
+            price: '18–30€',
             period: '/mes',
             tagline: 'Primers passos al tennis taula',
             features: [
@@ -576,6 +584,12 @@ const ca: Translation = {
               'Horaris adaptats a escolars',
             ],
             cta: 'Apuntar el meu fill/a',
+            priceTiers: [
+              { hours: '1 h/setmana', price: '18€' },
+              { hours: '2 h/setmana', price: '20€' },
+              { hours: '3 h/setmana', price: '25€' },
+              { hours: '4 h/setmana', price: '30€' },
+            ],
           },
         ],
       },
@@ -811,8 +825,8 @@ const en: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
           { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
-          { time: '19:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate' },
+          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate', split: { label: 'Competition training', tone: 'adults' } },
+          { time: '19:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate', split: { label: 'Competition training', tone: 'adults' } },
         ],
       },
     ],
@@ -829,7 +843,7 @@ const en: Translation = {
         plans: [
           {
             name: 'Beginners',
-            price: '€20',
+            price: '€18–30',
             period: '/month',
             tagline: 'First steps in table tennis',
             features: [
@@ -839,6 +853,12 @@ const en: Translation = {
               'School-friendly timetables',
             ],
             cta: 'Enrol my child',
+            priceTiers: [
+              { hours: '1 h/wk', price: '€18' },
+              { hours: '2 h/wk', price: '€20' },
+              { hours: '3 h/wk', price: '€25' },
+              { hours: '4 h/wk', price: '€30' },
+            ],
           },
         ],
       },

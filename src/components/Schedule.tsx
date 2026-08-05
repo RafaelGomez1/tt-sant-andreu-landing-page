@@ -91,10 +91,52 @@ export function Schedule() {
                     const style = TONE_STYLES[row.tone];
                     const Icon = style.icon;
 
+                    if (row.split) {
+                      const splitStyle = TONE_STYLES[row.split.tone];
+                      const SplitIcon = splitStyle.icon;
+
+                      return (
+                          <div
+                              key={`${day.day}-${row.time}`}
+                              className="relative isolate min-h-[4.25rem] overflow-hidden rounded-lg text-center transition-all duration-200 hover:-translate-y-px hover:shadow-md"
+                          >
+                            {/* Left / right full-color backgrounds */}
+                            <div className="pointer-events-none absolute inset-0 grid grid-cols-2">
+                              <div className={style.bg} />
+                              <div className={splitStyle.bg} />
+                            </div>
+
+                            {/* Shared time */}
+                            <div className="relative px-3 pt-2.5 text-lg font-extrabold tabular-nums leading-tight tracking-tight text-slate-900">
+                              {row.time}
+                            </div>
+
+                            {/* One centered icon for each half */}
+                            <div className="relative mt-1 grid grid-cols-2 px-2 pb-2">
+                              <div
+                                  className={`flex items-center justify-center ${style.text}`}
+                                  aria-label={row.label}
+                                  title={row.label}
+                              >
+                                <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                              </div>
+
+                              <div
+                                  className={`flex items-center justify-center ${splitStyle.text}`}
+                                  aria-label={row.split.label}
+                                  title={row.split.label}
+                              >
+                                <SplitIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                              </div>
+                            </div>
+                          </div>
+                      );
+                    }
+
                     return (
                       <div
                         key={`${day.day}-${row.time}`}
-                        className={`rounded-lg px-3 py-2.5 text-center transition-all duration-200 hover:shadow-md hover:-translate-y-px ${style.bg}`}
+                        className={`rounded-lg px-3 py-2.5 min-h-[4.25rem] text-center transition-all duration-200 hover:shadow-md hover:-translate-y-px ${style.bg}`}
                       >
                         <div className={`text-lg font-extrabold tabular-nums tracking-tight leading-tight ${style.timeText}`}>
                           {row.time}
@@ -130,10 +172,46 @@ export function Schedule() {
                   const style = TONE_STYLES[row.tone];
                   const Icon = style.icon;
 
+                  if (row.split) {
+                    const splitStyle = TONE_STYLES[row.split.tone];
+                    const SplitIcon = splitStyle.icon;
+
+                    return (
+                        <div
+                            key={`m-${day.day}-${row.time}`}
+                            className="relative isolate min-h-[4.75rem] overflow-hidden rounded-lg text-center transition-all duration-200"
+                        >
+                          {/* Full-card split background */}
+                          <div className="pointer-events-none absolute inset-0 grid grid-cols-2">
+                            <div className={style.bg} />
+                            <div className={splitStyle.bg} />
+                          </div>
+
+                          {/* Shared time */}
+                          <div className="relative pt-3 px-4 text-xl font-extrabold tabular-nums tracking-tight text-slate-900">
+                            {row.time}
+                          </div>
+
+                          {/* Labels aligned with each colored half */}
+                          <div className="relative mt-1.5 grid grid-cols-2 gap-2 px-3 pb-2.5">
+                            <div className={`inline-flex items-center justify-center gap-1.5 text-sm font-medium ${style.text}`}>
+                              <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                              <span>{row.label}</span>
+                            </div>
+
+                            <div className={`inline-flex items-center justify-center gap-1.5 text-sm font-medium ${splitStyle.text}`}>
+                              <SplitIcon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                              <span>{row.split.label}</span>
+                            </div>
+                          </div>
+                        </div>
+                    );
+                  }
+
                   return (
                     <div
                       key={`m-${day.day}-${row.time}`}
-                      className={`rounded-lg px-4 py-3 text-center transition-all duration-200 ${style.bg}`}
+                      className={`rounded-lg px-4 py-3 min-h-[4.75rem] text-center transition-all duration-200 ${style.bg}`}
                     >
                       <div className={`text-xl font-extrabold tabular-nums tracking-tight ${style.timeText}`}>
                         {row.time}

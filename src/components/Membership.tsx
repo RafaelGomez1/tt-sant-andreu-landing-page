@@ -48,10 +48,21 @@ export function Membership() {
                     <p className="mt-0.5 text-sm text-slate-500">{plan.tagline}</p>
 
                     {/* Price */}
-                    <div className="mt-4 flex items-baseline gap-1">
-                      <span className="font-display text-2xl font-bold text-navy-900">{plan.price}</span>
-                      {plan.period && <span className="text-sm text-slate-400">{plan.period}</span>}
-                    </div>
+                    {plan.priceTiers ? (
+                      <div className="mt-4 space-y-1.5">
+                        {plan.priceTiers.map((tier) => (
+                          <div key={tier.hours} className="flex items-baseline justify-between text-sm">
+                            <span className="text-slate-500">{tier.hours}</span>
+                            <span className="font-display font-bold text-navy-900">{tier.price}<span className="text-xs font-normal text-slate-400">{plan.period}</span></span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="mt-4 flex items-baseline gap-1">
+                        <span className="font-display text-2xl font-bold text-navy-900">{plan.price}</span>
+                        {plan.period && <span className="text-sm text-slate-400">{plan.period}</span>}
+                      </div>
+                    )}
 
                     {/* Features */}
                     <ul className="mt-5 flex-1 space-y-2.5 border-t border-slate-100 pt-5 text-left">

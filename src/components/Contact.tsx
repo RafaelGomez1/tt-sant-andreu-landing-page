@@ -6,7 +6,7 @@ import { SectionHeading, Reveal } from './SectionHeading';
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export function Contact() {
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
   const c = t.contact;
 
   const [status, setStatus] = useState<Status>('idle');
@@ -86,10 +86,11 @@ export function Contact() {
               ))}
 
               {/* Google Maps embed */}
+
               <div id="map" className="mt-1 flex-1 overflow-hidden rounded-2xl border border-slate-100 shadow-sm">
                 <iframe
                   title={c.mapAlt}
-                  src="https://www.google.com/maps?q=tt+sant+andreu&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21331.97434673786!2d2.1811148121465926!3d41.432426450732045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4bd00037d73dd%3A0xe471098c86deb37b!2sTennis%20Taula%20Sant%20Andreu!5e0!3m2!1ses!2ses!4v1785967949900!5m2!1ses!2ses"
                   className="h-44 w-full border-0 lg:h-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -102,9 +103,9 @@ export function Contact() {
           {/* Form */}
           <Reveal delay={120}>
             <form
-              onSubmit={handleSubmit}
-              noValidate
-              className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-navy-900/5 sm:p-8"
+                onSubmit={handleSubmit}
+                noValidate
+                className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-navy-900/5 sm:p-8"
             >
               <div className="space-y-5">
                 <div>
