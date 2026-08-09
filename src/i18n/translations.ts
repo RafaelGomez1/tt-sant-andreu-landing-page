@@ -288,7 +288,7 @@ const es: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
           { time: '17:00–18:00', label: 'No Federados', tone: 'members' },
-          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate', split: { label: 'Federados', tone: 'adults' } },
+          { time: '18:00–19:00', label: 'Infantil intermedio', tone: 'kids-intermediate', split: { label: 'Infantil iniciación', tone: 'kids-beginner' } },
           { time: '19:00–20:00', label: 'Infantil intermedio', tone: 'kids-intermediate', split: { label: 'Federados', tone: 'adults' } },
         ],
       },
@@ -556,7 +556,7 @@ const ca: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
           { time: '17:00–18:00', label: 'No federats', tone: 'members' },
-          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate', split: { label: 'Federats', tone: 'adults' } },
+          { time: '18:00–19:00', label: 'Infantil intermedi', tone: 'kids-intermediate', split: { label: 'Infantil iniciació', tone: 'kids-beginner' } },
           { time: '19:00–20:00', label: 'Infantil intermedi', tone: 'kids-intermediate', split: { label: 'Federats', tone: 'adults' } },
         ],
       },
@@ -825,7 +825,7 @@ const en: Translation = {
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
           { time: '17:00–18:00', label: 'Non-competing members', tone: 'members' },
-          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate', split: { label: 'Competition training', tone: 'adults' } },
+          { time: '18:00–19:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate', split: { label: 'Kids academy (beginner)', tone: 'kids-beginner' } },
           { time: '19:00–20:00', label: 'Kids academy (intermediate)', tone: 'kids-intermediate', split: { label: 'Competition training', tone: 'adults' } },
         ],
       },
