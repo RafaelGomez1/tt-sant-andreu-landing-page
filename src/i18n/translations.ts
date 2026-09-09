@@ -254,7 +254,7 @@ const es: Translation = {
     title: 'Horario de Entrenamiento',
     subtitle: 'Consulta las franjas disponibles para cada actividad.',
     occupancy: {
-      title: 'Ocupación',
+      title: 'Plazas Academia Infantil',
       label: 'Ocupación',
       places: 'plazas',
       open: 'Plazas disponibles',
@@ -536,7 +536,7 @@ const ca: Translation = {
     title: 'Horari d\'Entrenament',
     subtitle: 'Consulta les franges disponibles per a cada activitat.',
     occupancy: {
-      title: 'Ocupació',
+      title: 'Plaçes Academia Infantil',
       label: 'Ocupació',
       places: 'places',
       open: 'Places disponibles',
