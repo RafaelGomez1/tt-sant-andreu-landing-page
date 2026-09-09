@@ -311,12 +311,11 @@ export function Schedule() {
 
                     return (
                       <article key={card.key} className={`rounded-2xl px-4 py-3 ${toneStyle.bg}`}>
-                        <div className="flex items-center justify-between gap-3">
-                          <p className="flex-1 text-center text-sm font-semibold text-slate-900">
+                        <div className="relative flex items-center justify-center">
+                          <p className="text-center text-sm font-semibold text-slate-900">
                             {card.time}
                           </p>
-
-                          <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${meta.badge}`}>
+                          <span className={`absolute right-0 top-1/2 -translate-y-1/2 rounded-full px-2.5 py-1 text-[11px] font-semibold ${meta.badge}`}>
                             {card.occupancy.current}/{card.occupancy.allowed}
                           </span>
                         </div>
