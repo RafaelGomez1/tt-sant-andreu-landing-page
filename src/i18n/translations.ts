@@ -95,6 +95,7 @@ export type Translation = {
     subtitle: string;
     occupancy: {
       title: string;
+      subtitle: string;
       label: string;
       places: string;
       open: string;
@@ -255,6 +256,7 @@ const es: Translation = {
     subtitle: 'Consulta las franjas disponibles para cada actividad.',
     occupancy: {
       title: 'Plazas Academia Infantil',
+      subtitle: 'La academia intermedia no está disponible para alumnos nuevos sin experiencia',
       label: 'Ocupación',
       places: 'plazas',
       open: 'Plazas disponibles',
@@ -537,6 +539,7 @@ const ca: Translation = {
     subtitle: 'Consulta les franges disponibles per a cada activitat.',
     occupancy: {
       title: 'Plaçes Academia Infantil',
+      subtitle: 'L\'acadèmia intermèdia no està disponible per a alumnes nous sense experiència',
       label: 'Ocupació',
       places: 'places',
       open: 'Places disponibles',
@@ -820,6 +823,7 @@ const en: Translation = {
     subtitle: 'Check the available time slots for each activity.',
     occupancy: {
       title: 'Occupancy',
+      subtitle: 'The intermediate academy is not available for new students without experience',
       label: 'Occupancy',
       places: 'places',
       open: 'Places available',

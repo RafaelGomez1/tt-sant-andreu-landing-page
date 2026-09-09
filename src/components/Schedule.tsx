@@ -338,6 +338,9 @@ export function Schedule() {
         <Reveal delay={140}>
           <div className="mt-10 border-t border-slate-100 pt-6">
             <h3 className="text-center font-display text-lg font-bold text-navy-900 sm:text-xl">{s.occupancy.title}</h3>
+            <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-slate-500">
+              {s.occupancy.subtitle}
+            </p>
 
             <div className="mt-5 grid gap-5 lg:grid-cols-3">
               {occupancyColumns.map((column) => (
