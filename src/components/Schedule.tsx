@@ -129,7 +129,7 @@ export function Schedule() {
       return {
         key: `${slot.occupancyKey}-${slot.tone}`,
         day: day.day,
-        time: slot.occupancyKey === 'FRIDAY_6_7' ? '18:00–20:00' : slot.time,
+        time: slot.occupancyKey === 'FRIDAY_6_8' ? '18:00–20:00' : slot.time,
         tone: slot.tone,
         occupancy,
         state: getOccupancyState(occupancy.current, occupancy.allowed),
