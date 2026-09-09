@@ -1,6 +1,7 @@
-import { Users, Baby, GraduationCap, Swords } from 'lucide-react';
+import { Users, Baby, GraduationCap, Swords, AlertCircle, CheckCircle2, XCircle } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import type { ScheduleRow } from '../i18n/translations';
+import { academyScheduleOccupancySlots, getAcademyScheduleOccupancy, getOccupancyState } from '../data/academyGroupOccupancy';
 import { SectionHeading, Reveal } from './SectionHeading';
 
 type Tone = ScheduleRow['tone'];
@@ -49,9 +50,55 @@ const LEGEND_KEYS: { tone: Tone; labelKey: keyof ReturnType<typeof useLanguage>[
   { tone: 'members', labelKey: 'members' },
 ];
 
+function getOccupancyMeta(state: 'open' | 'few-spots' | 'full', scheduleCopy: ReturnType<typeof useLanguage>['t']['schedule']) {
+  return {
+    open: {
+      label: scheduleCopy.occupancy.open,
+      icon: CheckCircle2,
+      badge: 'bg-emerald-50 text-emerald-700 ring-1 ring-inset ring-emerald-200',
+      text: 'text-emerald-700',
+      iconClass: 'text-emerald-600',
+    },
+    'few-spots': {
+      label: scheduleCopy.occupancy.fewSpots,
+      icon: AlertCircle,
+      badge: 'bg-amber-50 text-amber-700 ring-1 ring-inset ring-amber-200',
+      text: 'text-amber-700',
+      iconClass: 'text-amber-600',
+    },
+    full: {
+      label: scheduleCopy.occupancy.full,
+      icon: XCircle,
+      badge: 'bg-rose-50 text-rose-700 ring-1 ring-inset ring-rose-200',
+      text: 'text-rose-700',
+      iconClass: 'text-rose-600',
+    },
+  }[state];
+}
+
 export function Schedule() {
   const { t } = useLanguage();
   const s = t.schedule;
+  const academyOccupancyCards = academyScheduleOccupancySlots
+    .map((slot) => {
+      const day = s.days.find((scheduleDay) => scheduleDay.key === slot.dayKey);
+      const row = day?.rows.find((scheduleRow) => scheduleRow.time === slot.time);
+      const label = slot.tone === row?.tone ? row.label : row?.split?.label;
+      const occupancy = getAcademyScheduleOccupancy(slot.dayKey, slot.time, slot.tone);
+
+      if (!day || !row || !label || !occupancy) return null;
+
+      return {
+        key: `${slot.occupancyKey}-${slot.tone}`,
+        day: day.day,
+        time: slot.time,
+        label,
+        tone: slot.tone,
+        occupancy,
+        state: getOccupancyState(occupancy.current, occupancy.allowed),
+      };
+    })
+    .filter((card): card is NonNullable<typeof card> => card !== null);
 
   return (
     <section id="schedule" className="bg-white">
@@ -112,9 +159,9 @@ export function Schedule() {
                             </div>
 
                             {/* One centered icon for each half */}
-                            <div className="relative mt-1 grid grid-cols-2 px-2 pb-2">
+                            <div className="relative mt-1 grid grid-cols-2 gap-2 px-2 pb-2">
                               <div
-                                  className={`flex items-center justify-center ${style.text}`}
+                                  className={`flex flex-col items-center justify-center ${style.text}`}
                                   aria-label={row.label}
                                   title={row.label}
                               >
@@ -122,7 +169,7 @@ export function Schedule() {
                               </div>
 
                               <div
-                                  className={`flex items-center justify-center ${splitStyle.text}`}
+                                  className={`flex flex-col items-center justify-center ${splitStyle.text}`}
                                   aria-label={row.split.label}
                                   title={row.split.label}
                               >
@@ -194,14 +241,18 @@ export function Schedule() {
 
                           {/* Labels aligned with each colored half */}
                           <div className="relative mt-1.5 grid grid-cols-2 gap-2 px-3 pb-2.5">
-                            <div className={`inline-flex items-center justify-center gap-1.5 text-sm font-medium ${style.text}`}>
-                              <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                              <span>{row.label}</span>
+                            <div className={`inline-flex flex-col items-center justify-center gap-1.5 text-sm font-medium ${style.text}`}>
+                              <div className="inline-flex items-center justify-center gap-1.5">
+                                <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                                <span>{row.label}</span>
+                              </div>
                             </div>
 
-                            <div className={`inline-flex items-center justify-center gap-1.5 text-sm font-medium ${splitStyle.text}`}>
-                              <SplitIcon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                              <span>{row.split.label}</span>
+                            <div className={`inline-flex flex-col items-center justify-center gap-1.5 text-sm font-medium ${splitStyle.text}`}>
+                              <div className="inline-flex items-center justify-center gap-1.5">
+                                <SplitIcon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                                <span>{row.split.label}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -227,6 +278,39 @@ export function Schedule() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={140}>
+          <div className="mt-10 border-t border-slate-100 pt-6">
+            <h3 className="font-display text-base font-bold text-navy-900">{s.occupancy.title}</h3>
+
+            <div className="mt-4 grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+              {academyOccupancyCards.map((card) => {
+                const meta = getOccupancyMeta(card.state, s);
+                const toneStyle = TONE_STYLES[card.tone];
+
+                return (
+                  <article key={card.key} className="rounded-2xl border border-slate-100 bg-slate-50/70 px-4 py-3">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <p className="text-xs font-medium text-slate-500">
+                          {card.day} · {card.time}
+                        </p>
+                        <p className={`mt-1 inline-flex items-center gap-1.5 text-sm font-semibold ${toneStyle.text}`}>
+                          <span className={`h-2 w-2 rounded-full ${toneStyle.dot}`} />
+                          {card.label}
+                        </p>
+                      </div>
+
+                      <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${meta.badge}`}>
+                        {card.occupancy.current}/{card.occupancy.allowed}
+                      </span>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

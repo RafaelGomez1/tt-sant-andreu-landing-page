@@ -14,8 +14,15 @@ export type ScheduleRow = {
 };
 
 export type ScheduleDay = {
+  key: 'monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday';
   day: string;
   rows: ScheduleRow[];
+};
+
+export type AcademyGroupOccupancyResponseDTO = {
+  group: string;
+  allowed: number;
+  current: number;
 };
 
 export type Translation = {
@@ -81,6 +88,15 @@ export type Translation = {
     eyebrow: string;
     title: string;
     subtitle: string;
+    occupancy: {
+      title: string;
+      label: string;
+      places: string;
+      open: string;
+      fewSpots: string;
+      full: string;
+      fullNote: string;
+    };
     legend: {
       members: string;
       kidsBeginner: string;
@@ -232,6 +248,15 @@ const es: Translation = {
     eyebrow: 'Tu semana',
     title: 'Horario de Entrenamiento',
     subtitle: 'Consulta las franjas disponibles para cada actividad.',
+    occupancy: {
+      title: 'Ocupación',
+      label: 'Ocupación',
+      places: 'plazas',
+      open: 'Plazas disponibles',
+      fewSpots: 'Quedan pocas plazas',
+      full: 'Grupo completo',
+      fullNote: 'Si te interesa, escríbenos para entrar en lista de espera.',
+    },
     legend: {
       members: 'Socios no federados',
       kidsBeginner: 'Academia infantil (iniciación)',
@@ -248,6 +273,7 @@ const es: Translation = {
     cta: 'Prueba una clase',
     days: [
       {
+        key: 'monday',
         day: 'Lunes',
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
@@ -257,6 +283,7 @@ const es: Translation = {
         ],
       },
       {
+        key: 'tuesday',
         day: 'Martes',
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
@@ -266,6 +293,7 @@ const es: Translation = {
         ],
       },
       {
+        key: 'wednesday',
         day: 'Miércoles',
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
@@ -275,6 +303,7 @@ const es: Translation = {
         ],
       },
       {
+        key: 'thursday',
         day: 'Jueves',
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
@@ -284,6 +313,7 @@ const es: Translation = {
         ],
       },
       {
+        key: 'friday',
         day: 'Viernes',
         rows: [
           { time: '16:00–17:00', label: 'No Federados', tone: 'members' },
@@ -500,6 +530,15 @@ const ca: Translation = {
     eyebrow: 'La teva setmana',
     title: 'Horari d\'Entrenament',
     subtitle: 'Consulta les franges disponibles per a cada activitat.',
+    occupancy: {
+      title: 'Ocupació',
+      label: 'Ocupació',
+      places: 'places',
+      open: 'Places disponibles',
+      fewSpots: 'Queden poques places',
+      full: 'Grup complet',
+      fullNote: 'Si t\'interessa, escriu-nos per entrar a la llista d\'espera.',
+    },
     legend: {
       members: 'Socis no federats',
       kidsBeginner: 'Acadèmia infantil (iniciació)',
@@ -516,6 +555,7 @@ const ca: Translation = {
     cta: 'Prova una classe',
     days: [
       {
+        key: 'monday',
         day: 'Dilluns',
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
@@ -525,6 +565,7 @@ const ca: Translation = {
         ],
       },
       {
+        key: 'tuesday',
         day: 'Dimarts',
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
@@ -534,6 +575,7 @@ const ca: Translation = {
         ],
       },
       {
+        key: 'wednesday',
         day: 'Dimecres',
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
@@ -543,6 +585,7 @@ const ca: Translation = {
         ],
       },
       {
+        key: 'thursday',
         day: 'Dijous',
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
@@ -552,6 +595,7 @@ const ca: Translation = {
         ],
       },
       {
+        key: 'friday',
         day: 'Divendres',
         rows: [
           { time: '16:00–17:00', label: 'No federats', tone: 'members' },
@@ -769,6 +813,15 @@ const en: Translation = {
     eyebrow: 'Your week',
     title: 'Training Schedule',
     subtitle: 'Check the available time slots for each activity.',
+    occupancy: {
+      title: 'Occupancy',
+      label: 'Occupancy',
+      places: 'places',
+      open: 'Places available',
+      fewSpots: 'Only a few places left',
+      full: 'Group full',
+      fullNote: 'Contact us to join the waiting list.',
+    },
     legend: {
       members: 'Non-competing members',
       kidsBeginner: 'Kids academy (beginner)',
@@ -785,6 +838,7 @@ const en: Translation = {
     cta: 'Try a class',
     days: [
       {
+        key: 'monday',
         day: 'Monday',
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
@@ -794,6 +848,7 @@ const en: Translation = {
         ],
       },
       {
+        key: 'tuesday',
         day: 'Tuesday',
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
@@ -803,6 +858,7 @@ const en: Translation = {
         ],
       },
       {
+        key: 'wednesday',
         day: 'Wednesday',
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
@@ -812,6 +868,7 @@ const en: Translation = {
         ],
       },
       {
+        key: 'thursday',
         day: 'Thursday',
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
@@ -821,6 +878,7 @@ const en: Translation = {
         ],
       },
       {
+        key: 'friday',
         day: 'Friday',
         rows: [
           { time: '16:00–17:00', label: 'Non-competing members', tone: 'members' },
