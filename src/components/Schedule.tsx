@@ -83,16 +83,14 @@ export function Schedule() {
     .map((slot) => {
       const day = s.days.find((scheduleDay) => scheduleDay.key === slot.dayKey);
       const row = day?.rows.find((scheduleRow) => scheduleRow.time === slot.time);
-      const label = slot.tone === row?.tone ? row.label : row?.split?.label;
       const occupancy = getAcademyScheduleOccupancy(slot.dayKey, slot.time, slot.tone);
 
-      if (!day || !row || !label || !occupancy) return null;
+      if (!day || !row || !occupancy) return null;
 
       return {
         key: `${slot.occupancyKey}-${slot.tone}`,
         day: day.day,
-        time: slot.time,
-        label,
+        time: slot.occupancyKey === 'FRIDAY_6_7_TECHNIQUE' ? '18:00–20:00' : slot.time,
         tone: slot.tone,
         occupancy,
         state: getOccupancyState(occupancy.current, occupancy.allowed),
@@ -281,7 +279,7 @@ export function Schedule() {
 
         <Reveal delay={140}>
           <div className="mt-10 border-t border-slate-100 pt-6">
-            <h3 className="font-display text-base font-bold text-navy-900">{s.occupancy.title}</h3>
+            <h3 className="text-center font-display text-lg font-bold text-navy-900 sm:text-xl">{s.occupancy.title}</h3>
 
             <div className="mt-4 grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
               {academyOccupancyCards.map((card) => {
@@ -290,14 +288,10 @@ export function Schedule() {
 
                 return (
                   <article key={card.key} className="rounded-2xl border border-slate-100 bg-slate-50/70 px-4 py-3">
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="min-w-0">
-                        <p className="text-xs font-medium text-slate-500">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p className={`rounded-full px-3 py-1 text-center text-xs font-semibold text-slate-900 ${toneStyle.bg}`}>
                           {card.day} · {card.time}
-                        </p>
-                        <p className={`mt-1 inline-flex items-center gap-1.5 text-sm font-semibold ${toneStyle.text}`}>
-                          <span className={`h-2 w-2 rounded-full ${toneStyle.dot}`} />
-                          {card.label}
                         </p>
                       </div>
 
