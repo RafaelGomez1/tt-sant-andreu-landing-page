@@ -25,6 +25,11 @@ export type AcademyGroupOccupancyResponseDTO = {
   current: number;
 };
 
+export type AcademyGroupOccupancyApiResponseDTO = {
+  beginnerGroups: AcademyGroupOccupancyResponseDTO[];
+  intermediateGroup: AcademyGroupOccupancyResponseDTO;
+};
+
 export type Translation = {
   nav: {
     home: string;

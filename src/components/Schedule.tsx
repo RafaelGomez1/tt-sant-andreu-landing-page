@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Users, Baby, GraduationCap, Swords, AlertCircle, CheckCircle2, XCircle } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
-import type { ScheduleRow } from '../i18n/translations';
-import { academyScheduleOccupancySlots, getAcademyScheduleOccupancy, getOccupancyState } from '../data/academyGroupOccupancy';
+import type { AcademyGroupOccupancyApiResponseDTO, AcademyGroupOccupancyResponseDTO, ScheduleRow } from '../i18n/translations';
+import { API_BASE_URL, API_CONFIG } from '../config/api';
+import { academyGroupOccupancyFallback, academyScheduleOccupancySlots, getAcademyScheduleOccupancy, getOccupancyState } from '../data/academyGroupOccupancy';
 import { SectionHeading, Reveal } from './SectionHeading';
 
 type Tone = ScheduleRow['tone'];
@@ -76,21 +78,58 @@ function getOccupancyMeta(state: 'open' | 'few-spots' | 'full', scheduleCopy: Re
   }[state];
 }
 
+function normalizeOccupancyResponse(
+  response: AcademyGroupOccupancyApiResponseDTO,
+): AcademyGroupOccupancyResponseDTO[] {
+  return [...response.beginnerGroups, response.intermediateGroup];
+}
+
 export function Schedule() {
   const { t } = useLanguage();
   const s = t.schedule;
+  const [occupancies, setOccupancies] = useState<AcademyGroupOccupancyResponseDTO[]>(academyGroupOccupancyFallback);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadOccupancies = async () => {
+      const response = await fetch(`${API_BASE_URL}/members/academy-groups/occupancy`, {
+        ...API_CONFIG.defaultOptions,
+        headers: API_CONFIG.headers,
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to load academy group occupancy: ${response.status}`);
+      }
+
+      const data = (await response.json()) as AcademyGroupOccupancyApiResponseDTO;
+
+      if (isMounted) {
+        setOccupancies(normalizeOccupancyResponse(data));
+      }
+    };
+
+    void loadOccupancies().catch((error: unknown) => {
+      console.error(error);
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   const academyOccupancyCards = academyScheduleOccupancySlots
     .map((slot) => {
       const day = s.days.find((scheduleDay) => scheduleDay.key === slot.dayKey);
       const row = day?.rows.find((scheduleRow) => scheduleRow.time === slot.time);
-      const occupancy = getAcademyScheduleOccupancy(slot.dayKey, slot.time, slot.tone);
+      const occupancy = getAcademyScheduleOccupancy(occupancies, slot.dayKey, slot.time, slot.tone);
 
       if (!day || !row || !occupancy) return null;
 
       return {
         key: `${slot.occupancyKey}-${slot.tone}`,
         day: day.day,
-        time: slot.occupancyKey === 'FRIDAY_6_7_TECHNIQUE' ? '18:00–20:00' : slot.time,
+        time: slot.occupancyKey === 'FRIDAY_6_7' ? '18:00–20:00' : slot.time,
         tone: slot.tone,
         occupancy,
         state: getOccupancyState(occupancy.current, occupancy.allowed),
