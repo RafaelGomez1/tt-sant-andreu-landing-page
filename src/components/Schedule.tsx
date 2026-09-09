@@ -111,7 +111,9 @@ export function Schedule() {
     {
       key: 'friday',
       title: s.days.find((day) => day.key === 'friday')?.day,
-      cards: academyOccupancyCards.filter((card) => card.key.startsWith('FRIDAY')),
+      cards: academyOccupancyCards
+        .filter((card) => card.key.startsWith('FRIDAY'))
+        .sort((a, b) => a.time.localeCompare(b.time)),
     },
   ];
 
@@ -298,10 +300,10 @@ export function Schedule() {
           <div className="mt-10 border-t border-slate-100 pt-6">
             <h3 className="text-center font-display text-lg font-bold text-navy-900 sm:text-xl">{s.occupancy.title}</h3>
 
-            <div className="mt-4 grid gap-4 lg:grid-cols-3">
+            <div className="mt-5 grid gap-5 lg:grid-cols-3">
               {occupancyColumns.map((column) => (
-                <div key={column.key} className="space-y-2.5">
-                  <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                <div key={column.key} className="space-y-3">
+                  <p className="text-center text-sm font-semibold uppercase tracking-[0.14em] text-slate-500">
                     {column.title}
                   </p>
 
@@ -310,12 +312,12 @@ export function Schedule() {
                     const toneStyle = TONE_STYLES[card.tone];
 
                     return (
-                      <article key={card.key} className={`rounded-2xl px-4 py-3 ${toneStyle.bg}`}>
+                      <article key={card.key} className={`rounded-2xl px-5 py-4 ${toneStyle.bg}`}>
                         <div className="relative flex items-center justify-center">
-                          <p className="text-center text-sm font-semibold text-slate-900">
+                          <p className="text-center text-base font-semibold text-slate-900">
                             {card.time}
                           </p>
-                          <span className={`absolute right-0 top-1/2 -translate-y-1/2 rounded-full px-2.5 py-1 text-[11px] font-semibold ${meta.badge}`}>
+                          <span className={`absolute right-0 top-1/2 -translate-y-1/2 rounded-full px-3 py-1.5 text-xs font-semibold ${meta.badge}`}>
                             {card.occupancy.current}/{card.occupancy.allowed}
                           </span>
                         </div>
