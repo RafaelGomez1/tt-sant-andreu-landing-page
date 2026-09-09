@@ -97,6 +97,23 @@ export function Schedule() {
       };
     })
     .filter((card): card is NonNullable<typeof card> => card !== null);
+  const occupancyColumns = [
+    {
+      key: 'monday',
+      title: s.days.find((day) => day.key === 'monday')?.day,
+      cards: academyOccupancyCards.filter((card) => card.key.startsWith('MONDAY')),
+    },
+    {
+      key: 'wednesday',
+      title: s.days.find((day) => day.key === 'wednesday')?.day,
+      cards: academyOccupancyCards.filter((card) => card.key.startsWith('WEDNESDAY')),
+    },
+    {
+      key: 'friday',
+      title: s.days.find((day) => day.key === 'friday')?.day,
+      cards: academyOccupancyCards.filter((card) => card.key.startsWith('FRIDAY')),
+    },
+  ];
 
   return (
     <section id="schedule" className="bg-white">
@@ -281,27 +298,33 @@ export function Schedule() {
           <div className="mt-10 border-t border-slate-100 pt-6">
             <h3 className="text-center font-display text-lg font-bold text-navy-900 sm:text-xl">{s.occupancy.title}</h3>
 
-            <div className="mt-4 grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-              {academyOccupancyCards.map((card) => {
-                const meta = getOccupancyMeta(card.state, s);
-                const toneStyle = TONE_STYLES[card.tone];
+            <div className="mt-4 grid gap-4 lg:grid-cols-3">
+              {occupancyColumns.map((column) => (
+                <div key={column.key} className="space-y-2.5">
+                  <p className="text-center text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+                    {column.title}
+                  </p>
 
-                return (
-                  <article key={card.key} className="rounded-2xl border border-slate-100 bg-slate-50/70 px-4 py-3">
-                    <div className="flex items-center justify-between gap-3">
-                      <div className="min-w-0 flex-1">
-                        <p className={`rounded-full px-3 py-1 text-center text-xs font-semibold text-slate-900 ${toneStyle.bg}`}>
-                          {card.day} · {card.time}
-                        </p>
-                      </div>
+                  {column.cards.map((card) => {
+                    const meta = getOccupancyMeta(card.state, s);
+                    const toneStyle = TONE_STYLES[card.tone];
 
-                      <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${meta.badge}`}>
-                        {card.occupancy.current}/{card.occupancy.allowed}
-                      </span>
-                    </div>
-                  </article>
-                );
-              })}
+                    return (
+                      <article key={card.key} className={`rounded-2xl px-4 py-3 ${toneStyle.bg}`}>
+                        <div className="flex items-center justify-between gap-3">
+                          <p className="flex-1 text-center text-sm font-semibold text-slate-900">
+                            {card.time}
+                          </p>
+
+                          <span className={`rounded-full px-2.5 py-1 text-[11px] font-semibold ${meta.badge}`}>
+                            {card.occupancy.current}/{card.occupancy.allowed}
+                          </span>
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>
